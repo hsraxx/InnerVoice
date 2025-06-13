@@ -13,6 +13,7 @@ app.add_middleware(
         "http://localhost:3000",  # Alternative local port
         "https://*.vercel.app",   # Vercel deployments
         "https://innervoice.vercel.app",  # Your specific Vercel domain
+        "https://*.onrender.com",  # Render deployments
     ],
     allow_credentials=True,
     allow_methods=["*"],

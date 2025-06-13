@@ -7,7 +7,7 @@ EMOTION_LABELS = ["happy", "sad", "angry", "anxious", "calm", "neutral"]
 def get_emotion_pipeline():
     return pipeline("text-classification", model="bhadresh-savani/distilbert-base-uncased-emotion", top_k=None)
 
-def get_emotion(text: str):
+async def analyze_emotion(text: str):
     pipe = get_emotion_pipeline()
     result = pipe(text)
     # result is a list of dicts with 'label' and 'score'
